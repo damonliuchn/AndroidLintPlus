@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+configurations {
+    lintChecks
+}
+
+dependencies {
+    compile 'com.android.tools.lint:lint-api:24.3.1'
+    compile 'com.android.tools.lint:lint-checks:24.3.1'
+
+    lintChecks files(jar)
+}
+
+jar {
+    manifest {
+        attributes('Lint-Registry': 'net.masonliu.androidlintplus.Registry')
+    }
+}
+
+defaultTasks 'assemble'
+
+task install(type: Copy, dependsOn: build) {
+    from configurations.lintChecks
+    into System.getProperty('user.home') + '/.android/lint/'
+}

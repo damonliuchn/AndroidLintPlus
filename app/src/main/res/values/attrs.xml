@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TypeStatus">
+        <attr name="state_type_selected" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="EasyEditText">
+        <attr name="android:text"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:hint"/>
+        <attr name="android:inputType"/>
+        <attr name="android:imeOptions"/>
+        <attr name="android:textColorHint"/>
+        <attr name="inputTypePhoneSegmentation" format="boolean"/>
+    </declare-styleable>
+</resources>
